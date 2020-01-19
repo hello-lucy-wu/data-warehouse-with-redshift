@@ -27,6 +27,7 @@ This project is to build a data warehouse based on [song data](https://s3.consol
 
 
 ### Steps 
-* run `create_tables.py` to create database and tables.
-* run `etl.py` to process the entire datasets and insert data into each table
+* replace HOST and ARN in dwh.cfg with your own redshift cluster host and iam role
+* run `create_tables.py` to create fact and dimension tables for the star schema in Redshift
+* run `etl.py` to load data from S3 into staging tables on Redshift and then process that data into analytics tables on Redshift
 
