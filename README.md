@@ -1,6 +1,6 @@
 # data-warehouse-with-redshift
 
-This project is to build a data warehouse based on [song data](https://s3.console.aws.amazon.com/s3/buckets/udacity-dend/song_data/?region=us-west-2&tab=overview) and [log data](https://s3.console.aws.amazon.com/s3/buckets/udacity-dend/log_data/?region=us-west-2&tab=overview) residing in S3. The data structure is the same as the one in my previous project  [data-modeling-with-postgres](https://github.com/hello-lucy-wu/data-modeling-with-postgres#Data). I created an ETL pipeline that extracts data from S3, stages them in Redshift, and transforms data into a set of dimensional tables to find insights in what songs people are listening to and how many songs do users listen to on average between visiting home page.
+This project is to build a data warehouse based on [song data](https://s3.console.aws.amazon.com/s3/buckets/udacity-dend/song_data/?region=us-west-2&tab=overview) and [log data](https://s3.console.aws.amazon.com/s3/buckets/udacity-dend/log_data/?region=us-west-2&tab=overview) residing in S3. The data structure is the same as the one in my previous project  [data-modeling-with-postgres](https://github.com/hello-lucy-wu/data-modeling-with-postgres#Data). I created an ETL pipeline that extracts data from S3, stages them in Redshift, and transforms data into a set of dimensional tables to find insights in what is the most popular song in the database
 
 ### Table of Contents
 * [Tables](#Tables)
@@ -30,4 +30,4 @@ This project is to build a data warehouse based on [song data](https://s3.consol
 * replace HOST and ARN in dwh.cfg with your own redshift cluster host and iam role
 * run `create_tables.py` to create fact and dimension tables for the star schema in Redshift
 * run `etl.py` to load data from S3 into staging tables on Redshift and then process that data into analytics tables on Redshift
-
+* run 'get_insights.py' to get most popular song
